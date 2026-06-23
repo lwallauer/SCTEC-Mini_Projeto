@@ -128,33 +128,33 @@ RF12 - Dataset Final
 
 # 📈 Etapas do Pipeline
 
-## RF01 — Geração de Dados Sintéticos
+## RF01 — Criar ou Carregar o Dataset de Vendas
 
 - Simulação do cenário de e-commerce;
 - Injeção controlada de inconsistências;
 - Dados inspirados no ecossistema Olist.
 
-## RF02 — Auditoria Estrutural
+## RF02 — Inspecionar e Descrever os Dados
 
 - Tipos de dados;
 - Valores ausentes;
 - Estatísticas descritivas iniciais.
 
-## RF03 — Limpeza e Higienização
+## RF03 — Limpar e Tratar os Dados 
 
 - Tratamento de valores nulos;
 - Regex para padronização de textos;
 - Conversão de datas;
 - Aplicação de regras de negócio.
 
-## RF04 — Tratamento de Outliers
+## RF04 — Detectar e Tratar Outliers (versões v1 e v2)
 
 Aplicação do método estatístico IQR para obtenção de duas versões:
 
 - V1 — Com Outliers;
 - V2 — Sem Outliers.
 
-## RF05 — Feature Engineering
+## RF05 — Criar Colunas Derivadas com Transformações
 
 Criação de:
 
@@ -165,7 +165,7 @@ Criação de:
 - Ano-Mês;
 - Faixas de receita.
 
-## RF06 — Métricas Agregadas
+## RF06 — Calcular Métricas Agregadas (groupby)
 
 Agrupamentos por:
 
@@ -174,7 +174,7 @@ Agrupamentos por:
 - Região;
 - Faixa de valor.
 
-## RF07 — Segmentação de Clientes
+## RF07 — Segmentar Clientes por Nível de Gasto
 
 Classificação em:
 
@@ -184,7 +184,7 @@ Classificação em:
 
 🥉 Bronze
 
-## RF08 — Estatísticas com NumPy
+## RF08 — Calcular Estatísticas com NumPy
 
 Cálculo de:
 
@@ -195,7 +195,7 @@ Cálculo de:
 - Participação percentual;
 - Broadcasting.
 
-## RF09 — Visualizações
+## RF09 — Criar Visualizações com Matplotlib e Seaborn
 
 Geração automática de:
 
@@ -203,7 +203,7 @@ Geração automática de:
 - Gráfico de barras;
 - Boxplot.
 
-## RF10 — Funções Reutilizáveis
+## RF10 — Organizar o Código em Funções Reutilizáveis
 
 Aplicação de:
 
@@ -211,7 +211,7 @@ Aplicação de:
 - Callbacks;
 - Expressões Lambda.
 
-## RF11 — Exportação e Auditoria
+## RF11 — Ler e Escrever Arquivos (CSV e JSON)
 
 Persistência em:
 
@@ -220,7 +220,7 @@ Persistência em:
 
 Validação automática da integridade dos arquivos.
 
-## RF12 — Dataset Final
+## RF12 — Consolidar a Análise e Salvar o Dataset Final
 
 Consolidação da base de produção:
 

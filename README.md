@@ -1,6 +1,6 @@
 # 📊 Projeto DataView — Pipeline de Engenharia e Análise de Dados
 
-> **Status do Projeto:** `CONCLUÍDO 🚀`
+> ![Status](https://img.shields.io/badge/Status-Concluído-success)🚀`
 
 [![Python Version](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Library-Pandas-orange.svg)](https://pandas.pydata.org/)

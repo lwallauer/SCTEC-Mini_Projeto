@@ -232,35 +232,21 @@ data/final/vendas_final.csv
 
 # 📊 Visualizações
 
-## Receita Total por Mês
+## 📈 Receita Total por Mês
 
-Arquivo gerado:
-
-```text
-outputs/graficos/receita_por_mes.png
-```
+![Receita por Mês](outputs/graficos/receita_por_mes.png)
 
 ---
 
-## Top Categorias por Receita
+## 📊 Top Categorias por Receita
 
-Arquivo gerado:
-
-```text
-outputs/graficos/top_produtos.png
-```
+![Top Categorias](outputs/graficos/top_produtos.png)
 
 ---
 
-## Distribuição de Receita por Região
+## 📦 Distribuição de Receita por Região
 
-Arquivo gerado:
-
-```text
-outputs/graficos/dist_regiao.png
-```
-
----
+![Distribuição por Região](outputs/graficos/dist_regiao.png)
 
 # 🌟 Boas Práticas e Qualidade de Software
 

@@ -1,0 +1,1 @@
+# SCTEC-Mini_Projeto

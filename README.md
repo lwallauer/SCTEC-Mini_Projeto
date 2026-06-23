@@ -322,8 +322,9 @@ ano/
 ---
 
 # 👨‍💻 Autor
+Autor: Leandro Wallauer dos Santos
 
-Projeto desenvolvido como exercício de Engenharia e Análise de Dados, contemplando conceitos de:
+Projeto desenvolvido durante a formação SC-Tec | LAB365 para consolidar conhecimentos em Engenharia e Análise de Dados, abrangendo Data Cleaning, Feature Engineering, Estatística Aplicada, Visualização de Dados e boas práticas de desenvolvimento em Python.
 
 - Engenharia de Dados;
 - Data Cleaning;

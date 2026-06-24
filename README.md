@@ -383,7 +383,7 @@ ano/
 |---|---|
 | 📓 Notebook interativo | [`dataview.ipynb`](https://github.com/lwallauer/SCTEC-Mini_Projeto/blob/main/notebooks/dataview.ipynb) |
 | 📁 Repositório GitHub | [SCTEC-Mini_Projeto](https://github.com/lwallauer/SCTEC-Mini_Projeto) |
-| 🎬 Vídeo de apresentação | [Assistir no YouTube](https://www.youtube.com/watch?v=LINK_DO_VIDEO) |
+| 🎬 Vídeo de apresentação | <a href="https://drive.google.com/file/d/1z5YqOIczj_bnT-EG_KM7EQMaoClN8Mjn/view?usp=sharing" target="_blank">Assistir no Google Drive ↗</a> |
 
 
 ---

@@ -320,6 +320,12 @@ No dataset sintético gerado (`vendas.csv`), cada registro representa uma transa
 
 # 🔮 Próximos Passos
 
+## 🧹 Refatoração PEP 8 — Limite de Caracteres por Linha
+
+Adequação completa ao limite de **79 caracteres por linha** (PEP 8 E501),
+eliminando quebras implícitas e melhorando a legibilidade em ambientes
+com régua de 80 colunas (VS Code, PyCharm, Colab).
+
 ## 🗄️ Modelagem Relacional SQL
 
 Separação em dimensões:

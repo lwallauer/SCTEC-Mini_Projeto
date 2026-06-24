@@ -269,6 +269,15 @@ No dataset sintético gerado (`vendas.csv`), cada registro representa uma transa
 
 ---
 
+## ⚖️ Decisão de Negócio: Por que a Versão 2 (Sem Outliers) no Dataset Final? (RF12)
+
+Para a consolidação do pipeline no **RF12** (`data/final/vendas_final.csv`), foi tomada a decisão estratégica de utilizar a **Versão 2 (V2)** dos dados, onde os outliers foram tratados e removidos via método IQR.
+
+* **O papel da V1 (Com Outliers):** É fundamental para a contabilidade e relatórios financeiros retroativos, pois reflete o faturamento real absoluto do e-commerce, incluindo compras massivas ou picos atípicos.
+* **A escolha da V2 (Sem Outliers) para o Dataset Final:** O objetivo principal deste dataset consolidado é preparar o terreno para análises preditivas e **treinamento de modelos de Inteligência Artificial / Machine Learning**. 
+
+> ⚠️ **Justificativa Técnica:** Algoritmos de aprendizado de máquina (como regressões e clusterizações) são altamente sensíveis a valores discrepantes extremos. Manter os outliers distorceria as funções de custo dos modelos, gerando previsões enviesadas. A V2 garante uma base estatisticamente estável, representando o comportamento padrão de consumo e garantindo a qualidade de futuras frentes de IA.
+
 # 📊 Visualizações
 
 ## 📈 Receita Total por Mês

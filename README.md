@@ -20,9 +20,11 @@ O objetivo principal do sistema foi simular uma base bruta com falhas sistêmica
 - [🚀 Como Executar](#-como-executar)
 - [🔄 Arquitetura do Pipeline](#-arquitetura-do-pipeline)
 - [📈 Etapas do Pipeline](#-etapas-do-pipeline)
+- [📦 Granularidade Analítica](#-granularidade-analítica-adotada)
 - [📊 Visualizações](#-visualizações)
 - [🌟 Boas Práticas](#-boas-práticas-e-qualidade-de-software)
 - [🔮 Próximos Passos](#-próximos-passos)
+- [🎯 Entregáveis da Avaliação](#-entregáveis-da-avaliação)
 - [👨‍💻 Autor](#-autor)
 
 ---
@@ -34,18 +36,24 @@ O projeto segue estritamente a arquitetura de diretórios recomendada pelas boas
 ```text
 Projeto/
 ├── data/
-│   ├── raw/
+│   ├── final/
+│   │   └── vendas_final.csv
 │   ├── processed/
 │   │   ├── v1_com_outliers/
+│   │   │   └── vendas_v1.csv
 │   │   └── v2_outliers_tratado/
-│   └── final/
+│   │       └── vendas_v2.csv
+│   └── ram/
+│       └── vendas.csv
 ├── notebooks/
+│   └── dataview.ipynb
 ├── outputs/
 │   ├── graficos/
+│   │   ├── dist_regiao.png
+│   │   └── receita_por_mes.png
 │   ├── metricas_por_mes.csv
 │   ├── segmentacao_clientes.csv
 │   └── estatisticas_gerais.json
-├── dataview.py
 └── README.md
 ```
 
@@ -71,13 +79,13 @@ Projeto/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu_usuario/dataview.git
+git clone https://github.com/lwallauer/SCTEC-Mini_Projeto.git
 ```
 
 Entre na pasta:
 
 ```bash
-cd dataview
+cd SCTEC-Mini_Projeto
 ```
 
 Instale as dependências:
@@ -86,11 +94,27 @@ Instale as dependências:
 pip install pandas numpy matplotlib seaborn
 ```
 
-Execute o pipeline:
+## Forma 1 — Notebook Interativo (Recomendado)
+
+Abra o notebook diretamente no Jupyter ou Google Colab:
+
+📓 [`notebooks/dataview.ipynb`](https://github.com/lwallauer/SCTEC-Mini_Projeto/blob/main/notebooks/dataview.ipynb)
+
+Execute célula por célula para acompanhar cada etapa do pipeline de forma interativa, com visualizações inline e saídas intermediárias.
+
+```bash
+jupyter notebook notebooks/dataview.ipynb
+```
+
+## Forma 2 — Script Python
+
+Execute o pipeline completo via linha de comando:
 
 ```bash
 python dataview.py
 ```
+
+> **Nota:** Ambas as formas produzem os mesmos outputs — datasets processados em `data/`, gráficos em `outputs/graficos/` e relatórios em `outputs/`.
 
 ---
 
@@ -230,6 +254,21 @@ data/final/vendas_final.csv
 
 ---
 
+# 📦 Granularidade Analítica Adotada
+
+> **Decisão de Design:** A granularidade analítica deste projeto é **categoria de produto**, não produto individual.
+
+No dataset sintético gerado (`vendas.csv`), cada registro representa uma transação associada a uma **categoria** (ex.: Eletrônicos, Moda, Alimentos). Essa escolha foi deliberada e reflete uma abordagem comum em análises de e-commerce de médio porte, onde o volume de SKUs individuais inviabiliza análises granulares sem camadas adicionais de modelagem dimensional.
+
+**Implicações práticas:**
+
+- As métricas de `RF06` (Métricas Agregadas) são calculadas por **categoria**, não por produto;
+- Os agrupamentos e visualizações refletem essa granularidade;
+- A segmentação de clientes (`RF07`) é baseada no total de receita por cliente, independente de categoria ou produto;
+- A evolução futura (`Próximos Passos`) prevê a separação em tabelas dimensionais `dim_produtos` e `dim_categorias` via SQL, viabilizando análise por produto individual.
+
+---
+
 # 📊 Visualizações
 
 ## 📈 Receita Total por Mês
@@ -247,6 +286,8 @@ data/final/vendas_final.csv
 ## 📦 Distribuição de Receita por Região
 
 ![Distribuição por Região](outputs/graficos/dist_regiao.png)
+
+---
 
 # 🌟 Boas Práticas e Qualidade de Software
 
@@ -321,10 +362,20 @@ ano/
 
 ---
 
-# 👨‍💻 Autor
-Autor: Leandro Wallauer dos Santos
+# 🎯 Entregáveis da Avaliação
 
-Projeto desenvolvido durante a formação SC-Tec | LAB365 para consolidar conhecimentos em Engenharia e Análise de Dados, abrangendo Data Cleaning, Feature Engineering, Estatística Aplicada, Visualização de Dados e boas práticas de desenvolvimento em Python.
+| Entregável | Link |
+|---|---|
+| 📓 Notebook interativo | [`dataview.ipynb`](https://github.com/lwallauer/SCTEC-Mini_Projeto/blob/main/notebooks/dataview.ipynb) |
+| 📁 Repositório GitHub | [SCTEC-Mini_Projeto](https://github.com/lwallauer/SCTEC-Mini_Projeto) |
+| 🎬 Vídeo de apresentação | [Assistir no YouTube](https://www.youtube.com/watch?v=LINK_DO_VIDEO) |
+
+
+---
+
+# 👨‍💻 Autor
+
+Projeto desenvolvido durante a formação SC-Tec | LAB365 para consolidar conhecimentos em Engenharia e Análise de Dados, abrangendo Data Cleaning, Feature Engineering, Estatística Aplicada, Visualização de Dados e boas práticas de desenvolvimento em Python:
 
 - Engenharia de Dados;
 - Data Cleaning;
@@ -336,6 +387,8 @@ Projeto desenvolvido durante a formação SC-Tec | LAB365 para consolidar conhec
 - Programação Defensiva;
 - PEP 8;
 - Clean Code.
+
+**[Leandro Wallauer](https://github.com/lwallauer)**
 
 ---
 

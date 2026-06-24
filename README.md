@@ -43,7 +43,7 @@ Projeto/
 │   │   │   └── vendas_v1.csv
 │   │   └── v2_outliers_tratado/
 │   │       └── vendas_v2.csv
-│   └── ram/
+│   └── raw/
 │       └── vendas.csv
 ├── notebooks/
 │   └── dataview.ipynb
